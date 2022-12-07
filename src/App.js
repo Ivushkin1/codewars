@@ -2,18 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  function disemvowel(str) {
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-
-    let arr = str.split('').filter((item) => {
-      return vowels.indexOf(item) === -1;
-    });
-
-    return arr.join('');
+  function descendingOrder(n) {
+    let arr = n
+      .toString()
+      .split('')
+      .sort((a, b) => b - a)
+      .join('');
+    return +arr;
   }
-
-  console.log(disemvowel('sdfefaihoe eoou dfgay ewftey'));
-
+  console.log(descendingOrder(23876));
   return (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
