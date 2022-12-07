@@ -2,20 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  function getCount(str) {
+  function disemvowel(str) {
     let vowels = ['a', 'e', 'i', 'o', 'u'];
-    let count = 0;
 
-    let newstr = str.split('').forEach((item) => {
-      if (vowels.find((vow) => vow === item)) {
-        count++;
-      }
+    let arr = str.split('').filter((item) => {
+      return vowels.indexOf(item) === -1;
     });
 
-    return count;
+    return arr.join('');
   }
 
-  console.log(getCount('sdfefaihoeeoouay'));
+  console.log(disemvowel('sdfefaihoe eoou dfgay ewftey'));
 
   return (
     <header className="App-header">
