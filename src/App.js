@@ -1,13 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  function maskify(cc) {
-    let len = cc.length < 4 ? 0 : cc.length;
-    return '#'.repeat(len) + cc.split('').splice(-4).join('');
-  }
-
-  console.log(maskify('1'));
+const long = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+  long('abss', 'sfdfs');
 
   return (
     <header className="App-header">
