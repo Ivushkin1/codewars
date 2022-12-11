@@ -1,14 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-const long = (s1, s2) => [...new Set(s1+s2)].sort().join('')
-  long('abss', 'sfdfs');
+function App() {
+  function numberJoy(n) {
+    let sum = n
+      .toString()
+      .split('')
+      .reduce((acc, item) => +acc + +item);
+    let sum2 = +sum.toString().split('').reverse().join('');
+    if (sum * sum2 === n) {
+      return true;
+    } else return false;
+  }
 
-  return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-    </header>
-  );
+  console.log(numberJoy(1729));
 }
 
 export default App;
